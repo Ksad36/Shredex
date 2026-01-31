@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <!-- Site Title-->
+    <title>Forms</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald:500,600,700|Roboto:300,300i,700|Condiment">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css" id="main-styles-link">
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="preloader loaded">
+      <div class="preloader-body">
+        <div class="cssload-box cssload-loading"></div>
+      </div>
+    </div>
+    <div class="page text-center">
+      <!-- Page Header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="78px" data-xl-stick-up-offset="98px" data-xxl-stick-up-offset="118px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-aside-outer rd-navbar-collapse bg-default">
+              <div class="rd-navbar-aside">
+                <ul class="list-inline list-inline-xxl">
+                  <li>
+                    <div class="unit unit-spacing-xs">
+                      <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
+                      <div class="unit-body"><a href="#">4201 S Washington St. Marion, IN 46953</a></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit unit-spacing-xs">
+                      <div class="unit-left"><span class="icon mdi mdi-cellphone-android"></span></div>
+                      <div class="unit-body"><a href="tel:#">1-800-123-4567</a></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit unit-spacing-xs">
+                      <div class="unit-left"><span class="icon mdi mdi-email-outline"></span></div>
+                      <div class="unit-body"><a href="mailto:#">team@shredex.us</a></div>
+                    </div>
+                  </li>
+                </ul><a class="basket" href="shopping-cart.html"><span class="icon mdi mdi-cart-outline"></span><span class="basket-count">2</span></a>
+              </div>
+            </div>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-206x55.png" alt="" width="206" height="55"/><img class="brand-logo-light" src="images/logo-inverse-206x55.png" alt="" width="206" height="55"/></a>
+                  </div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="classic-blog.html">Blog</a>
+                        <!-- RD Navbar Dropdown-->
+                        <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="classic-blog.html">Classic Blog</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="grid-blog.html">Grid Blog</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="modern-blog.html">Modern Blog</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="masonry-blog.html">Masonry Blog</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="blog-post.html">Blog Post</a></li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="grid-gallery.html">Gallery</a>
+                        <!-- RD Navbar Dropdown-->
+                        <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="grid-gallery.html">Grid Gallery</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="grid-without-padding-gallery.html">Grid without Padding Gallery</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="masonry-gallery.html">Masonry Gallery</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="cobbles-gallery.html">Cobbles Gallery</a></li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#">Pages</a>
+                        <!-- RD Navbar Megamenu-->
+                        <ul class="rd-menu rd-navbar-megamenu">
+                          <li class="bg-megamenu"></li>
+                          <li class="rd-megamenu-item">
+                            <h4 class="rd-megamenu-title">Elements</h4>
+                            <ul class="rd-megamenu-list">
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Typography</a></li>
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Buttons</a></li>
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tables.html">Tables</a></li>
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Forms</a></li>
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="grid-system.html">Grid system</a></li>
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-&amp;-accordions.html">Tabs &amp; accordions</a></li>
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="progress-bars.html">Progress bars</a></li>
+                            </ul>
+                          </li>
+                          <li class="rd-megamenu-item">
+                            <h4 class="rd-megamenu-title">Pages</h4>
+                            <ul class="rd-megamenu-list">
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404-page.html">404 Page</a></li>
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="503-page.html">503 Page</a></li>
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="under-construction.html">Under Construction</a></li>
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Coming Soon</a></li>
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="privacy-policy.html">Terms of Use</a></li>
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="services.html">Services</a></li>
+                              <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="single-service.html">Single Service</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="product-catalog.html">Shop</a>
+                        <!-- RD Navbar Dropdown-->
+                        <ul class="rd-menu rd-navbar-dropdown">
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="product-catalog.html">Product Catalog</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-product.html">Single Product</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="shopping-cart.html">Shopping Cart</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="checkout.html">Checkout</a></li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- RD Navbar Search-->
+                  <div class="rd-navbar-search">
+                    <button class="rd-navbar-search-toggle rd-navbar-fixed-element-2" data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
+                    <form class="rd-search" action="search-results.html" data-search-live="rd-search-results-live" method="GET">
+                      <div class="form-wrap">
+                        <label class="form-label" for="rd-navbar-search-form-input">Search...</label>
+                        <input class="rd-navbar-search-form-input form-input" id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">
+                        <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                      </div>
+                      <button class="rd-search-form-submit fa-search" type="submit"></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Breadcrumbs -->
+      <section class="breadcrumbs-custom bg-image context-dark snow-animate" style="background-image: url(images/bg-breadcrumbs.jpg);">
+        <div class="container">
+          <h2 class="breadcrumbs-custom-subtitle">Choose Your Style</h2>
+          <h1 class="breadcrumbs-custom-title text-decoration-lines"><span>Forms</span></h1>
+          <ul class="breadcrumbs-custom-path">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Pages</a></li>
+            <li class="active">Forms</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Forms-->
+      <section class="section section-xs section-first bg-default text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+              <h3>Login Form</h3>
+              <p>Easy-to-use form to sign in to your website.</p>
+              <div class="buttons-group"><a class="button button-md button-block button-facebook button-icon button-icon-left button-leaf" href="#"><span class="icon mdi mdi-facebook"></span>Facebook</a><a class="button button-md button-block button-twitter button-icon button-icon-left button-leaf" href="#"><span class="icon mdi mdi-twitter"></span>Twitter</a><a class="button button-md button-block button-google button-icon button-icon-left button-leaf" href="#"><span class="icon mdi mdi-google"></span>Google</a></div>
+              <div class="text-decoration-lines-3"><span class="text-decoration-lines-content">or</span></div>
+              <!-- RD Mailform-->
+              <form class="rd-form rd-mailform rd-form-centered">
+                <div class="form-wrap">
+                  <input class="form-input" id="login-email" type="email" name="email" data-constraints="@Email @Required">
+                  <label class="form-label" for="login-email">E-mail</label>
+                </div>
+                <div class="form-wrap">
+                  <input class="form-input" id="login-password" type="password" name="password" data-constraints="@Required">
+                  <label class="form-label" for="login-password">Password</label>
+                </div>
+                <button class="button button-block button-primary" type="submit">Sign In</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact us-->
+      <section class="section section-xs bg-default text-center">
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-lg-9 col-xl-8">
+              <h3>Contact Form</h3>
+              <!-- RD Mailform-->
+              <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                <div class="row row-20">
+                  <div class="col-sm-6">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-first-name" type="text" name="name" data-constraints="@Required"/>
+                      <label class="form-label" for="contact-first-name">First name</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-last-name" type="text" name="name" data-constraints="@Required"/>
+                      <label class="form-label" for="contact-last-name">Last name</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required"/>
+                      <label class="form-label" for="contact-email">E-mail</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-phone" type="text" name="phone" data-constraints="@Numeric"/>
+                      <label class="form-label" for="contact-phone">Phone</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-wrap">
+                      <label class="form-label" for="contact-message">Message</label>
+                      <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <button class="button button-primary" type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Us-->
+      <section class="section section-xs section-last bg-default text-center">
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-lg-9 col-xl-8">
+              <h3>Contact Form (with reCAPTCHA)</h3>
+              <!-- RD Mailform-->
+              <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                <div class="row row-20">
+                  <div class="col-sm-6">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-first-name-2" type="text" name="name" data-constraints="@Required">
+                      <label class="form-label" for="contact-first-name-2">First name</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-last-name-2" type="text" name="name" data-constraints="@Required">
+                      <label class="form-label" for="contact-last-name-2">Last name</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-email-2" type="email" name="email" data-constraints="@Email @Required">
+                      <label class="form-label" for="contact-email-2">E-mail</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-phone-2" type="text" name="phone" data-constraints="@Numeric">
+                      <label class="form-label" for="contact-phone-2">Phone</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-wrap">
+                      <textarea class="form-input" id="contact-message-2" name="message" data-constraints="@Required"></textarea>
+                      <label class="form-label" for="contact-message-2">Message</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap form-wrap-recaptcha">
+                      <!-- Google captcha-->
+                      <div class="recaptcha" id="captcha1" data-sitekey="6LfZlSETAAAAAC5VW4R4tQP8Am_to4bM3dddxkEt"></div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <button class="button button-block button-primary" type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subscribe to Our Newsletter-->
+      <section class="section parallax-container" data-parallax-img="images/bg-forms.jpg">
+        <div class="parallax-content section-lg context-dark bg-overlay-80 snow-animate">
+          <div class="container">
+            <div class="row row-30 align-items-center justify-content-center">
+              <div class="col-md-9 col-lg-6 col-xl-7">
+                <h1>Subscribe to Our Newsletter</h1>
+              </div>
+              <div class="col-md-9 col-lg-6 col-xl-5">
+                      <!-- RD Mailform-->
+                      <form class="rd-form rd-mailform rd-form-inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                        <div class="form-wrap">
+                          <input class="form-input" id="subscribe-form-1-email" type="email" name="email" data-constraints="@Email @Required">
+                          <label class="form-label" for="subscribe-form-1-email">Enter your e-mail...</label>
+                        </div>
+                        <div class="form-button">
+                          <button class="button button-primary" type="submit">Subscribe</button>
+                        </div>
+                      </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section section-xs section-first bg-default text-center">
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-md-9 col-lg-8 col-xl-7">
+              <h3>MailChimp</h3>
+              <p class="text-width-medium">Sign up to our newsletter and be the first to know about latest news, special offers, events, and discounts.</p>
+              <!-- Mailchimp-->
+              <form class="rd-form mailchimp-mailform rd-form-inline" data-form-output="form-output-global" action="https://templatemonster.us15.list-manage.com/subscribe/post?u=ba5bb362073a413f48e4a7b90&amp;id=8dc95d9dec" method="post">
+                <div class="form-wrap">
+                  <label class="form-label" for="mailchimp-email">Enter your e-mail</label>
+                  <input class="form-input" id="mailchimp-email" type="email" name="email" data-constraints="@Email @Required">
+                </div>
+                <div class="form-button">
+                  <button class="button button-primary" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-xs section-last bg-default text-center">
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-md-9 col-lg-8 col-xl-7">
+              <h3>Campaign Monitor</h3>
+              <p class="text-width-medium">Sign up to our newsletter and be the first to know about latest news, special offers, events, and discounts.</p>
+              <!-- Campaign Monitor-->
+              <form class="rd-form campaign-mailform rd-form-inline" data-form-output="form-output-global" action="https://templatermonster.createsend.com/t/j/s/zjjikd/" method="post">
+                <div class="form-wrap">
+                  <label class="form-label" for="campaign-email">Enter your e-mail</label>
+                  <input class="form-input" id="campaign-email" type="email" name="cm-zjjikd-zjjikd" data-constraints="@Email @Required">
+                </div>
+                <div class="form-button">
+                  <button class="button button-primary" type="submit">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page Footer-->
+      <footer class="section footer-classic bg-footer bg-overlay-90 context-dark snow-animate">
+        <div class="section-xxl">
+          <div class="container">
+            <div class="row row-50 justify-content-center">
+              <div class="col-lg-4 wow fadeInUp" data-wow-delay=".1s">
+                <h2>About us</h2>
+                <p class="max-width-xl-90 text-gray-400">We are Winter Sports, a community of dedicated skiing and snowboarding instructors, journalists, and bloggers. Our aim is to offer you the best insight on where to go for your winter holiday as well as to give you amazing skiing, snowboarding, and snowmobile riding opportunities with free benefits and bonuses for registered clients.</p><a class="footer-brand" href="./"><img src="images/logo-gray-143x63.png" alt="" width="143" height="63"/></a>
+              </div>
+              <div class="col-sm-8 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+                <h2>Latest blog posts</h2>
+                <div class="unit post-minimal">
+                  <div class="unit-left"><a href="blog-post.html"><img src="images/post-mini-1-70x70.jpg" alt="" width="70" height="70"/></a></div>
+                  <div class="unit-body">
+                    <h6 class="post-minimal-title"><a href="blog-post.html">10 New Snow Sports to Try This Winter</a></h6>
+                    <time class="post-minimal-time" datetime="2018-12-20 12:29">December 20, 2018 at 12:29 pm</time>
+                  </div>
+                </div>
+                <div class="unit post-minimal">
+                  <div class="unit-left"><a href="blog-post.html"><img src="images/post-mini-2-70x70.jpg" alt="" width="70" height="70"/></a></div>
+                  <div class="unit-body">
+                    <h6 class="post-minimal-title"><a href="blog-post.html">Daredevil Winter Sports in Finland</a></h6>
+                    <time class="post-minimal-time" datetime="2018-01-20 13:29">January 20, 2018 at 13:29 pm</time>
+                  </div>
+                </div>
+                <div class="unit post-minimal">
+                  <div class="unit-left"><a href="blog-post.html"><img src="images/post-mini-3-70x70.jpg" alt="" width="70" height="70"/></a></div>
+                  <div class="unit-body">
+                    <h6 class="post-minimal-title"><a href="blog-post.html">Best-Value Family Ski Trips</a></h6>
+                    <time class="post-minimal-time" datetime="2018-02-20 14:29">February 20, 2018 at 14:29 pm</time>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-8 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+                <h2>Get in touch</h2>
+                <form class="rd-form form-sm rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                  <div class="form-wrap">
+                    <input class="form-input" id="footer-form-name" type="text" name="name" data-constraints="@Required">
+                    <label class="form-label" for="footer-form-name">Name</label>
+                  </div>
+                  <div class="form-wrap">
+                    <input class="form-input" id="footer-form-email" type="email" name="email" data-constraints="@Email @Required">
+                    <label class="form-label" for="footer-form-email">E-mail</label>
+                  </div>
+                  <div class="form-wrap">
+                    <label class="form-label" for="footer-form-message">Message</label>
+                    <textarea class="form-input" id="footer-form-message" name="message" data-constraints="@Required"></textarea>
+                  </div>
+                  <div class="form-wrap">
+                    <button class="button button-md button-primary" type="submit">Send</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container wow fadeInUp" data-wow-delay="0s">
+          <!-- Rights-->
+          <p class="rights"><span>&copy;&nbsp; </span><span class="copyright-year"></span> <span>All Rights Reserved</span> <a href="privacy-policy.html">Terms of Use</a> <span>and</span> <a href="privacy-policy.html">Privacy Policy</a>
+          </p>
+        </div>
+      </footer>
+
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
