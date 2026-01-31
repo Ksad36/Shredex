@@ -1,0 +1,34 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_box-product
+include ../components/_ui-pagination
+
+block variables
+  - var activeCategory = 'shop'
+  - var pageName = 'Product Catalog'
+
+block page 
+  // Page Header
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    subtitle: 'Shop',
+    path: [pageName],
+    bgImage: 'bg-breadcrumbs'
+  })
+
+  // Product Catalog
+  section.section.section-xxl.bg-white
+    .container
+      h1 Product Catalog
+      .row.row-50.row-lg-80
+        include ../sections/_section-product-catalog-2-line
+
+      .pagination-wrap
+        +pagination-bootstrap(null, 1, 3)
+  ="\n"
+
+  // Page Footer
+  include ../sections/_footer-classic

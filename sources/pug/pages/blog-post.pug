@@ -1,0 +1,130 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_post
+include ../components/_ui-pagination
+include ../components/_box-comment
+include ../components/_ui-contact-form
+
+block variables
+  - var activeCategory = 'blog'
+  - var pageName = 'Blog Post Page'
+
+block page 
+  // Page Header
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    subtitle: 'Our news',
+    path: [pageName],
+    bgImage: 'bg-breadcrumbs'
+  })
+
+  // Blog post
+  section.section.section-sm.section-first.bg-default
+    .container
+      .row.row-50.justify-content-center
+        .col-lg-11.col-xl-10
+          .section-blog-post
+            .section-blog-post-header
+              h1 10 New Snow Sports to Try This Winter
+              .post-bottom-panel
+                div
+                  .group-xl
+
+                    .post-modern-author
+                      span.post-icon.icon.mdi.mdi-account
+                      span by
+                        =' '
+                        a(href='#') Ronald Chen
+
+
+                    .post-modern-time
+                      span.post-icon.icon.mdi.mdi-calendar-clock
+                      time(datetime='2018-07-20 12:29') July 20, 2018 at 12:29 pm
+
+                div
+                  .group-xl
+
+                    .post-modern-views
+                      span.post-icon.icon.mdi.mdi-eye
+                      span 193
+
+
+                    .post-modern-comment
+                      span.post-icon.icon.mdi.mdi-comment
+                      a(href='#') 3
+
+            .section-blog-post-figure
+              +jpg('post-14-970x647')
+              span.badge.badge-primary Winter
+
+            .section-blog-post-content
+              p.big Curabitur egestas mi eget massa maximus, eget dapibus ex feugiat. Vestibulum a dapibus tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam lorem orci, pellentesque quis leo at, dapibus elementum metus.
+              p.text-gray-600 Nullam in sollicitudin nibh. Aenean eget est ac quam facilisis placerat ac vitae diam. Suspendisse est sem, fermentum nec massa sit habitasse platea dictumst. Maecenas tellus sem, imperdietMauris aliquam ipsum et mi pulvinar, sed iaculis nunc tristique. Etiam aliquam velit orci, vitae dignissim turpis elementum quis. Phasellus eu enim lobortis, pellentesque erat quis, elementum nisl. Praesent vehicula ex eu libero fermentum sodales. Pellentesque facilisis gravida nibh id tempor. Vivamus elementum sit amet leo non iaculis. Proin id magna convallis, porta tortor in, consequat enim. Curabitur in massa justo.  vel ante sed, consectetur auctor diam. Vivamus aliquam nisl non.
+
+            .section-blog-post-figure
+              +jpg('post-15-970x647')
+
+            .section-blog-post-content
+              // Quote Classic
+              article.quote-classic
+                span.icon.mdi.mdi-format-quote.quote-classic-icon
+                .quote-classic-text: p.q Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum venenatis nulla, quis porta sem pellentesque rutrum. Curabitur ullamcorper lacus ac sem pulvinar placerat. Sed leo ipsum, convallis ac erat nec, porta efficitur neque. Sed non elementum eros, id maximus lorem. Integer auctor lectus quis ultricies dictum. Curabitur egestas mi eget dapibus ex feugiat.
+                p.quote-classic-author by
+                  =' '
+                  a(href='#') Ronald Chen
+
+              p.text-gray-600 Pellentesque quis leo at, dapibus elementum metus. Aenean molestie aliquam ex, in dignissim odio lobortis nec. Nam blandit metus tincidunt, mattis velit vitae, viverra lorem. Vivamus venenatis nunc nisi, vitae facilisis est porttitor vitae. Donec et dui vulputate, finibus eros sed, ultrices mauris. Donec eleifend risus arcu. Maecenas massa ex, hendrerit ac arcu ac, congue rhoncus neque. Duis ut fermentum lacus, non dapibus turpis. Nunc vel tempor erat. Quisque gravida iaculis lacus at faucibus.
+
+              .group-lg
+                a.button.button-md.button-facebook.button-icon.button-icon-left.button-leaf(href='#')
+                  span.icon.mdi.mdi-facebook
+                  | Facebook
+                a.button.button-md.button-twitter.button-icon.button-icon-left.button-leaf(href='#')
+                  span.icon.mdi.mdi-twitter
+                  | Twitter
+                a.button.button-md.button-google.button-icon.button-icon-left.button-leaf(href='#')
+                  span.icon.mdi.mdi-google
+                  | Google+
+
+  ="\n"
+
+  // Comments
+  section.section.section-sm.bg-default.text-md-left
+    .container
+      .row.justify-content-center
+        .col-lg-11.col-xl-9.offset-xl-left-1
+          h2 Comments
+          +box-comment({
+            img: 'team-9-80x80',
+            author: 'Catherine Payne',
+            text: 'Cum armarium experimentum, omnes indictioes locus magnum, grandis quadraes. Secula potuss, tanquam varius adiurator. Heu, brevis guttus!'
+          })
+            +box-comment({
+              img: 'team-10-80x80',
+              author: 'Ronald Chen',
+              userMessage: 'Catherine Payne',
+              text: 'Cum amor mori, omnes menses dignus altus, noster rumores. Grandis tabes inciviliter pugnas repressor est. Domesticus, salvus homos tandem acquirere de bi-color, flavum ausus!'
+            })
+
+          +box-comment({
+            img: 'team-11-80x80',
+            author: 'Philip Bowman',
+            text: 'Visus de nobilis barcas, imperium stella! Pol, a bene exemplar, pars! Buxum germanus hibrida est. Vae, fortis messor! Alter, altus exemplars inciviliter visum de emeritis, primus onus.'
+          })
+  ="\n"
+
+  // Leave a Comment
+  section.section.section-sm.section-last.bg-default.text-md-left
+    .container
+      .row.justify-content-center
+        .col-lg-11.col-xl-9.offset-xl-left-1
+          h2 Leave a Comment
+          +contact-form({ buttonText: 'Submit' })
+
+  ="\n"
+
+  // Page Footer
+  include ../sections/_footer-classic

@@ -1,0 +1,95 @@
+-
+	var config = {
+		brandName: 'Tempaw Trunk',
+		logoDefault: 'logo-206x55',
+		logoInverse: 'logo-inverse-206x55',
+		postLink: 'blog-post.html',
+		getTemplateLink: '#get-template-link',
+		primary: '#db1212'
+	},
+	menu = [
+		{
+			title: 'Home',
+			category: 'home', 
+			link: 'index.html'
+		},
+		{
+			title: 'About',
+			category: 'about'
+		},
+		{
+			title: 'Blog',
+			category: 'blog',
+			link: 'classic-blog.html',
+			dropdown: [
+				{ title: 'Classic Blog' },
+				{ title: 'Grid Blog' },
+				{ title: 'Modern Blog' },
+				{ title: 'Masonry Blog' },
+				{ title: 'Blog Post' }
+			]
+		},
+		{
+			title: 'Gallery',
+			category: 'gallery',
+			link: 'grid-gallery.html',
+			dropdown: [
+				{ title: 'Grid Gallery' },
+				{ title: 'Grid without Padding Gallery' },
+				{ title: 'Masonry Gallery' },
+				{ title: 'Cobbles Gallery' }
+			]
+		},
+		{
+			title: 'Pages',
+			category: 'pages',
+			link: '#',
+			megamenu: [
+				{
+					megamenu_img: true,
+				},
+				{
+					title: 'Elements',
+					list: [
+						{ title: 'Typography' },
+						{ title: 'Buttons' },
+						{ title: 'Tables' },
+						{ title: 'Forms' },
+						{ title: 'Grid system' },
+						{ title: 'Tabs & accordions' },
+						{ title: 'Progress bars' }
+					]
+				},
+				{
+					title: 'Pages',
+					list: [
+						{ title: '404 Page' },
+						{ title: '503 Page' },
+						{ title: 'Under Construction' },
+						{ title: 'Coming Soon' },
+						{
+							title: 'Terms of Use',
+							link: 'privacy-policy.html'
+						},
+						{ title: 'Services' },
+						{ title: 'Single Service' }
+					]
+				}
+			]
+		},
+		{
+			title: 'Shop',
+			category: 'shop',
+			link: 'product-catalog.html',
+			dropdown: [
+				{ title: 'Product Catalog' },
+				{ title: 'Single Product' },
+				{ title: 'Shopping Cart' },
+				{ title: 'Checkout' }
+			]
+		},
+		{
+			title: 'Contacts',
+			category: 'contacts'
+		}
+	]

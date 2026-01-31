@@ -1,0 +1,33 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_ui-progress-bar-linear
+include ../components/_ui-inline-subscribe-form
+
+block variables
+  - var activeCategory = 'pages'
+  - var pageName = 'Under construction'
+
+block title
+  title=pageName
+
+block page
+  section.section.section-single.novi-background.bg-overlay-50.novi-background.context-dark.snow-animate(style='background-image: url(images/bg-under-construction.jpg);')
+    .section-single-inner
+      //-Page Header
+      include ../sections/_section-header-base-transparent
+
+      //- Page Main
+      .section-single-main
+        .container
+          +progress-bar-linear({
+            headerClass: 'justify-content-end',
+            valueTo: "25"
+          })
+          h1.text-decoration-lines
+            span The Website will be Available Soon
+          p.text-width-medium Our website is under construction, we are working very hard to give you the best experience on our new web site. Stay ready, we`re launching soon.
+          +inline-subscribe-form({customUnique: '1'})
+
+      //-Page Footer
+      include ../sections/_section-footer-base-transparent

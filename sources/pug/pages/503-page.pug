@@ -1,0 +1,29 @@
+extends  ../_skeleton
+
+block variables
+  - var activeCategory = 'pages'
+  - var pageName = '503 Page'
+
+block title
+  title=pageName
+
+block page
+  section.section.section-single.novi-background.bg-overlay-50.novi-background.context-dark.snow-animate(style='background-image: url(images/bg-503.jpg);')
+    .section-single-inner
+      //-Page Header
+      include ../sections/_section-header-base-transparent
+
+      //- Page Main
+      .section-single-main
+        .container
+          .slide-title 503
+          h1.text-decoration-lines
+            span Service Is Temporary
+            div Unavailable
+          p.text-width-medium Sorry, we're offline right now to make our site even better. Please, come back later and check what we've been up to.
+          .group-xl
+            a.button.button-primary.button-leaf(href='index.html') Back to home page
+            a.button.button-white.button-leaf(href='contacts.html') Contact us
+
+      //-Page Footer
+      include ../sections/_section-footer-base-transparent

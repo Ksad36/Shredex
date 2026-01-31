@@ -1,0 +1,8 @@
+//- box info
+
+mixin box-info(obj)
+  a.box-info(href='#' class=obj.mod)
+    +jpg(obj.img, 'box-info-img')
+    .box-info-body
+      h4.box-info-title=obj.title
+      p.box-info-text=obj.text

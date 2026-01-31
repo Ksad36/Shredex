@@ -1,0 +1,29 @@
+extends  ../_skeleton
+
+block variables
+  - var activeCategory = 'pages'
+  - var pageName = '404 Page'
+
+block title
+  title=pageName
+
+block page
+  section.section.section-single.novi-background.bg-overlay-60.novi-background.context-dark.snow-animate(style='background-image: url(images/bg-404.jpg);')
+    .section-single-inner
+      //-Page Header
+      include ../sections/_section-header-base-transparent
+
+      //- Page Main
+      .section-single-main
+        .container
+          .slide-title 404
+          h1.text-decoration-lines
+            span Sorry, But the Page Was
+            div Not Found
+          p You may have mistyped the address or the page may have moved.
+          .group-xl
+            a.button.button-primary.button-leaf(href='index.html') Back to home page
+            a.button.button-white.button-leaf(href='contacts.html') Contact us
+
+      //-Page Footer
+      include ../sections/_section-footer-base-transparent

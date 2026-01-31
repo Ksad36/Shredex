@@ -1,0 +1,84 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_post
+include ../components/_ui-pagination
+
+block variables
+  - var activeCategory = 'blog'
+  - var pageName = 'Classic blog'
+
+block page 
+  // Page Header
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    subtitle: 'Our news',
+    path: [pageName],
+    bgImage: 'bg-breadcrumbs'
+  })
+
+  // Classic blog
+  section.section.section-xxl.bg-default
+    .container
+      .row.row-50.justify-content-center.justify-content-xl-between
+        .col-md-7.col-lg-8
+          +post-modern({
+            mod: 'post-modern',
+            img: 'post-7-770x514',
+            title: '10 New Snow Sports to Try This Winter',
+            author: 'Ronald Chen',
+            time: 'January 20, 2018 at 12:29 pm',
+            datetime: '2018-01-20 12:29',
+            numberViews: '193',
+            numberComments: '3',
+            badge: 'Winter'
+          })
+
+          +post-modern({
+            mod: 'post-modern',
+            img: 'post-8-770x514',
+            title: 'Daredevil Winter Sports in Finland',
+            author: 'Ronald Chen',
+            time: 'January 20, 2018 at 12:29 pm',
+            datetime: '2018-01-20 12:29',
+            numberViews: '260',
+            numberComments: '18',
+            badge: 'Articles'
+          })
+
+          +post-modern({
+            mod: 'post-modern',
+            img: 'post-9-770x514',
+            title: '5 Easy Tips to Get Your Child Snowboarding This Season',
+            author: 'Ronald Chen',
+            time: 'January 20, 2018 at 12:29 pm',
+            datetime: '2018-01-20 12:29',
+            numberViews: '170',
+            numberComments: '19',
+            badge: 'Tips & tricks'
+          })
+
+          +post-modern({
+            mod: 'post-modern',
+            img: 'post-10-770x514',
+            title: 'Best-Value Family Ski Trips',
+            author: 'Ronald Chen',
+            time: 'January 20, 2018 at 12:29 pm',
+            datetime: '2018-01-20 12:29',
+            numberViews: '460',
+            numberComments: '10',
+            badge: 'Skiing'
+          })
+
+          a.button.button-load.button-block.button-white-outline(href='#') Load more posts
+          .pagination-wrap
+            +pagination-bootstrap(null, 1, 3)
+
+        .col-md-5.col-lg-4.col-xl-3
+          include ../sections/_blog-aside-long
+  ="\n"
+
+  // Page Footer
+  include ../sections/_footer-classic

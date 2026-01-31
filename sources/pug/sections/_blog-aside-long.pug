@@ -1,0 +1,23 @@
+extends  _blog-aside
+
+block longAside
+  .col-sm-6.col-md-12
+    h2 Twitter feed
+    +widget-twitter({
+      "dataTwitterUsername": "templatemonster"
+    })
+
+  .col-sm-6.col-md-12
+    h2 Tags
+    ul.group-sm
+      li: a.button.button-tags.button-white-outline-2(href="#") Tips & tricks
+      li: a.button.button-tags.button-white-outline-2(href="#") Articles
+      li: a.button.button-tags.button-white-outline-2(href="#") Winter
+      li: a.button.button-tags.button-white-outline-2(href="#") Snow
+      li: a.button.button-tags.button-white-outline-2(href="#") Snowmobile
+      li: a.button.button-tags.button-white-outline-2(href="#") skiing
+      li: a.button.button-tags.button-white-outline-2(href="#") Holidays
+      li: a.button.button-tags.button-white-outline-2(href="#") Sportswear
+      li: a.button.button-tags.button-white-outline-2(href="#") News
+      li: a.button.button-tags.button-white-outline-2(href="#") Lift
+      li: a.button.button-tags.button-white-outline-2(href="#") Instructor

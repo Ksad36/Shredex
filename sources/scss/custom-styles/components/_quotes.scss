@@ -1,0 +1,121 @@
+/*
+*
+* Quotes
+*/
+
+//
+// Table of Contents: 
+//
+// Quote classic
+// Quote modern
+//
+
+
+
+//
+// Quote classic
+//
+.quote-classic-icon {
+  font-size: 60px;
+  line-height: 1;
+  margin-left: -14px;
+  color: $primary;
+  transform: scale(-1, -1);
+  will-change: transform;
+}
+
+.quote-classic-text {
+  font-size: 16px;
+  line-height: 1.89;
+  font-style: italic;
+  letter-spacing: 0;
+  color: $gray-800;
+}
+
+.quote-classic-cite {
+  font-size: $font-size-lg;
+  line-height: 1.67;
+  font-weight: 700;
+  font-family: $font-family-sec;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: $primary;
+}
+
+.quote-classic-inset { padding: 0 10px; }
+
+.quote-classic-status { color: $gray-600; }
+
+.quote-classic-wrap {
+  img { max-width: 100px }
+}
+
+p + .quote-classic { margin-top: 18px; }
+.quote-classic + p { margin-top: 35px; }
+* + .quote-classic { margin-top: 56px; }
+* + .quote-classic-text { margin-top: 10px; }
+* + .quote-classic-cite { margin-top: 35px; }
+* + .quote-classic-status { margin-top: 5px; }
+
+// Medium ≥576px
+@include media-breakpoint-up(sm) {
+
+  .quote-classic-text { font-size: $font-size-lg; }
+}
+
+// Medium <768px
+@include media-breakpoint-down(sm) {
+  .quote-classic-wrap {
+    .quote-classic-icon {
+      margin: 0;
+    }
+  }
+}
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+  .quote-classic-inset { padding: 0 0 0 40px; }
+
+  .quote-classic-wrap {
+    img {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+  }
+}
+
+//
+// Quote modern
+//
+.quote-modern {
+  text-align: left;
+}
+
+.quote-modern-2 {
+  padding: 20px;
+  background: $white;
+}
+
+.quote-modern-cite { color: $primary; }
+.quote-modern-status { color: $gray-600; }
+
+.quote-modern-text {
+  font-size: 16px;
+  font-style: italic;
+}
+
+* + .quote-modern-status { margin-top: 4px; }
+* + .quote-modern-text { margin-top: 30px; }
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+  .quote-modern-2 {
+    padding: 40px;
+  }
+
+  .quote-modern-text {
+    font-size: $font-size-lg;
+    line-height: 1.89;
+    letter-spacing: 0;
+  }
+}

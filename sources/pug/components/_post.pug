@@ -1,0 +1,72 @@
+//- post
+
+mixin post-classic(obj)
+  .post(class=obj.mod)
+    a.post-img-wrap(href='blog-post.html'): +jpg(obj.img, 'post-img')
+    h3.post-title: a(href='blog-post.html')=obj.title
+    p.post-text=obj.text
+    if(obj.datetime)
+      time.post-classic-time(datetime=obj.datetime)
+        div.heading-1=obj.timeNumber
+        =obj.timeMonth
+
+
+mixin post-modern(obj)
+  .post(class=obj.mod)
+    a.post-img-wrap(href='blog-post.html'): +jpg(obj.img, 'post-img')
+    .post-body
+      .post-content
+        h3.post-title: a(href='blog-post.html')=obj.title
+        if(obj.text)
+          p.post-text=obj.text
+        else if(obj.textBlogPage == 'grid')
+          p.post-text Lorem ipsum dolor sit amet, et est labore labitur nРominavi, melius perfecto petentium qui eu. et est labore labitur nРominavi.
+        else if(obj.textBlogPage == 'modern')
+          p.post-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius purus eget ligula mattis, pellentesque nte imperdiet. Curabitur nunc sapien, blandit Pellentesque ut sem id neque tristique porta. Nunc nisi massa, convallis non.
+        else if(obj.textBlogPage == 'masonry')
+          p.post-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum venenatis nulla, quis porta sem pellentesque rutrum.
+        else if(obj.textBlogPage == 'masonry2')
+          p.post-text Lorem ipsum dolor sit amet, consectetur nulla, quis porta sem pellentesque rutrum. Curabitur ullamcorper lacus ac sem pulvinar consectetur adipiscing elit. Aenean dictum venenatis nulla, quis porta sem pellentesque rutrum. Curabitur ullamcorper lacus ac sem.
+        else
+          p.post-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius purus eget ligula mattis, pellentesque nte imperdiet. Curabitur nunc sapien, blandit id consequat at, dictum commodo nisi. sagittis, posuere felis fringilla, ultricies mauris. Pellentesque ut sem id neque tristique porta. Nunc nisi massa, convallis non.
+
+      .post-bottom-panel
+        if(obj.author || obj.time)
+          div
+            .group-xl
+              if(obj.author)
+                .post-modern-author
+                  span.post-icon.icon.mdi.mdi-account
+                  span by
+                    a(href='#')=' ' + obj.author
+
+              if(obj.time)
+                .post-modern-time
+                  span.post-icon.icon.mdi.mdi-calendar-clock
+                  time(datetime=obj.datetime)=obj.time
+
+        if(obj.numberViews || obj.numberComments)
+          div
+            .group-xl
+              if(obj.numberViews)
+                .post-modern-views
+                  span.post-icon.icon.mdi.mdi-eye
+                  span=obj.numberViews
+
+              if(obj.numberComments)
+                .post-modern-comment
+                  span.post-icon.icon.mdi.mdi-comment
+                  a(href='#')=obj.numberComments
+
+      span.badge.badge-primary=obj.badge
+
+
+mixin post-modern-aside-left(obj)
+  .post-modern-aside
+    .post-modern-aside-content
+      .post-modern-aside-time
+        time(datetime=obj.datetime)=obj.time
+      .post-modern-aside-img
+        +jpg(obj.img, 'img-circles')
+      .post-modern-aside-author
+        a(href='#')=obj.author

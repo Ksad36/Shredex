@@ -1,0 +1,124 @@
+//
+// Formstone Stepper Plugin
+// --------------------------------------------------
+
+.stepper {
+  position: relative;
+  display: block;
+
+  input[type="number"]{
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    -moz-appearance: textfield;
+  }
+
+  // Medium ≥576px
+  @include media-breakpoint-up(sm) {
+    input[type="number"]{
+      max-width: 115px;
+    }
+  }
+
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &-arrow{
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 1;
+    font-family: $mdi;
+    cursor: pointer;
+    color: $primary;
+    transition: .3s all ease;
+
+    &:hover{
+      color: $gray-800
+    }
+
+    &.up{
+      right: 18px;
+      text-align: left;
+
+      &:before{
+        content: '\f504';
+      }
+    }
+
+    &.down{
+      left: 16px;
+      text-align: right;
+
+      &:before{
+        content: '\f465';
+      }
+    }
+  }
+
+  &.disabled{
+    .stepper-arrow{
+      pointer-events: none;
+      opacity: .5;
+    }
+  }
+}
+
+.stepper-variant-2 {
+
+  .stepper {
+
+    .form-input {
+      padding: 11px 28px 10px;
+      max-width: 100px;
+    }
+
+    &-arrow {
+      color: $gray-600;
+
+      &.up {
+        right: 3px;
+
+        &:before {
+          content: '\f238';
+        }
+      }
+
+      &.down {
+        left: 3px;
+
+        &:before {
+          content: '\f237';
+        }
+      }
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .form-input {
+    min-height: 50px;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: .02em;
+  }
+}
+
+.stepper-variant-3 {
+
+  .stepper {
+
+    .form-input {
+      padding-left: 55px;
+      padding-right: 55px;
+      max-width: 100%;
+    }
+  }
+}

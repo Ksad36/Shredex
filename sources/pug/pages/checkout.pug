@@ -1,0 +1,112 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_box-product
+include ../components/_ui-pagination
+
+block variables
+  - var activeCategory = 'shop'
+  - var pageName = 'Checkout'
+
+block page 
+  // Page Header
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    subtitle: 'Shop',
+    path: [pageName],
+    bgImage: 'bg-breadcrumbs'
+  })
+
+  // Shopping Cart
+  section.section.section-xxl.bg-default
+    .container
+      .row.justify-content-center: .col-11.col-lg-10.col-xl-9
+        // Bootstrap tabs
+        #tabs-1.tabs-custom.tabs-horizontal.tabs-corporate
+          // Nav tabs
+          ul.nav.nav-tabs
+            li.nav-item(role='presentation'): a.nav-link.active(href='#tabs-1-1' data-toggle='tab') Shipping Info
+            li.nav-item(role='presentation'): a.nav-link(href='#tabs-1-2' data-toggle='tab') Payment Method
+          // Tab panes
+          .tab-content.tab-content-inset
+            div#tabs-1-1.tab-pane.fade.show.active
+              // RD Mailform
+              form.rd-form.rd-mailform
+                .row.row-30
+                  .col-sm-6
+                    .form-wrap
+                      input#checkout-first-name.form-input(type='text' name='name' data-constraints='@Required')
+                      label.form-label(for='checkout-first-name') First name
+
+                  .col-sm-6
+                    .form-wrap
+                      input#checkout-last-name.form-input(type='text' name='name' data-constraints='@Required')
+                      label.form-label(for='checkout-last-name') Last name
+
+                  .col-sm-6
+                    .form-wrap
+                      input#checkout-company.form-input(type='text' name='name' data-constraints='@Required')
+                      label.form-label(for='checkout-company') Company
+
+                  .col-sm-6
+                    .form-wrap
+                      input#checkout-city.form-input(type='text' name='name' data-constraints='@Required')
+                      label.form-label(for='checkout-city') City
+
+                  .col-sm-6
+                    .form-wrap
+                      input#checkout-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+                      label.form-label(for='checkout-email') E-mail
+
+                  .col-sm-6
+                    .form-wrap
+                      input#checkout-phone.form-input(type='text' name='phone' data-constraints='@Numeric')
+                      label.form-label(for='checkout-phone') Phone
+
+                  .col-12
+                    .form-wrap
+                      input#checkout-address.form-input(type='text' name='name' data-constraints='@Required')
+                      label.form-label(for='checkout-address') Address
+
+                  .col-12
+                    button.button.button-primary(type='submit') Checkout
+
+            div#tabs-1-2.tab-pane.fade
+              .box-width-570
+                .table-custom-responsive
+                  table.table-custom.table-custom-primary.table-checkout
+                    tbody
+                      tr
+                        td Cart Subtotal
+                        td $62.00
+                      tr
+                        td Shipping
+                        td Free Delivery
+                      tr
+                        td Total
+                        td $62.00
+
+                .box-radio
+                  .box-radio-item
+                    label.radio-inline
+                      input(name="input-group-radio", value="checkbox-1", type="radio", checked)
+                      | Direct Bank Transfer
+
+                  .box-radio-item
+                    label.radio-inline
+                      input(name="input-group-radio", value="checkbox-1", type="radio")
+                      | Cheque Payment
+
+                  .box-radio-item
+                    label.radio-inline
+                      input(name="input-group-radio", value="checkbox-1", type="radio")
+                      | PayPal
+
+                a.button.button-primary(href='#') Place order
+
+  ="\n"
+
+  // Page Footer
+  include ../sections/_footer-classic

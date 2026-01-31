@@ -1,0 +1,122 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_quote
+include ../components/_box-team
+include ../components/_ui-card
+
+block variables
+  - var activeCategory = 'about'
+  - var pageName = 'About Us'
+
+block page 
+  // Page Header
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    subtitle: 'Who We Are',
+    path: [pageName],
+    bgImage: 'bg-breadcrumbs'
+  })
+
+  section.section.section-xxl.bg-default.text-md-left
+    .container
+      .row.row-40.justify-content-xl-between.align-items-center.align-items-xl-start
+        .col-md-8.col-lg-6.wow.fadeInUp(data-wow-delay='0s')
+          a.video-cover.bg-overlay-30(data-lightbox='iframe', href='https://www.youtube.com/watch?v=1UWpbtUupQQ')
+            +jpg('video-1-570x381')
+            span.icon.mdi.mdi-play.video-cover-icon
+
+        .col-lg-6.col-xl-5
+          h1.wow.fadeInUp(data-wow-delay='.1s') About us
+          p.big.wow.fadeInUp(data-wow-delay='.15s') We are a community of friendly people who love all kinds of winter sports & activities.
+          p.wow.fadeInUp(data-wow-delay='.2s') Our team unites current & former snowboarders, skiers, bloggers and journalists specializing in writing about all kinds of winter activities and holiday opportunities for everyone. We also provide a wide range of skiing and snowboarding equipment and apparel to all our visitors and customers. Feel free to become one of them!
+          a.button.button-primary.button-leaf.wow.fadeInUp(href='#' data-wow-delay='.25s') View all information
+  ="\n"
+
+  include ../sections/_section-prices
+
+  // Sports Gear for Any Activity!
+  +parallax({
+    img: 'bg-about',
+    addClass: 'section-xxxl context-dark bg-overlay-60 snow-animate'
+  })
+    .container
+      h1.text-decoration-lines
+        span Sports Gear for Any Activity!
+      p.big.text-width-large Heu, altus brabeuta! Est magnum fides, cesaris. Mori unus ducunt ad castus epos. Est teres rector, cesaris. Zirbuss trabem in oenipons! Ubi est mirabilis victrix? Altus, talis hibridas nunquam attrahendam de flavum, albus pes!
+      a.button.button-primary.button-leaf(href='product-catalog.html') Browse our shop
+  ="\n"
+
+  // What people say
+  section.section.section-xxl.bg-default.text-md-left.section-relative
+    .container
+      .row
+        .col-lg-7
+          h1 What people say
+          // Owl Carousel
+          .owl-carousel(data-items='1', data-stage-padding='0', data-loop='true', data-autoplay='true', data-margin='0', data-mouse-drag="false", data-dots='true')
+            .owl-item
+              +quote-modern({
+                mod: 'quote-modern-2',
+                img: 'quote-3-70x70',
+                author: 'Susan williams',
+                text: 'Azureus bubos ducunt ad uria. Domuss sunt abactuss de altus lura. Poetas ire! Congregabo recte ducunt ad placidus index. Cur contencio unda? Bi-color, grandis acipensers interdum captis de superbus, regius demolitione. Consilium, fortis, et lapsus.'
+              })
+
+            .owl-item
+              +quote-modern({
+                mod: 'quote-modern-2',
+                img: 'quote-2-70x70',
+                author: 'James Smith',
+                text: 'Demissio de fortis devirginato, captis visus! Zeta rusticus magister est. Azureus buxums ducunt ad amor. Orexiss nocere, tanquam gratis silva. Pol, a bene terror. Seculas crescere, tanquam noster advena. Aonides, castor, et adiurator. Est placidus compater, cesaris.'
+              })
+            .owl-item
+              +quote-modern({
+                mod: 'quote-modern-2',
+                img: 'quote-1-70x70',
+                author: 'Mary McMillan',
+                text: 'Compater flavum sensorem est. Glutens ortum in fatalis hortus! Emeritis ionicis tormento cito visums advena est. Nunquam gratia fuga. Nunquam transferre rumor. Fidelis lacta velox apertos vigil est. Elogium, xiphias, et hydra.'
+              })
+
+        .col-xl-5.box-static.d-none.d-lg-block
+          .bg-image-right-2
+  ="\n"
+
+  // Our members
+  section.section.section-xxl.bg-white
+    .container
+      h1 Our members
+      .row.row-40
+        .col-sm-6.col-md-4
+          +box-team({
+            img: 'team-5-370x370',
+            title: 'Hannah Jones',
+            status: 'Skiing School Member',
+            description: true
+          })
+        .col-sm-6.col-md-4
+          +box-team({
+            img: 'team-6-370x370',
+            title: 'Daniel Williams',
+            status: 'Snowboarding School Member',
+            description: true,
+            text: 'Amors observare in fidelis cella! Gloss accelerare in salvus alta muta! Cum urbs ortum, omnes orexises tractare dexter, alter hydraes.'
+          })
+        .col-sm-6.col-md-4
+          +box-team({
+            img: 'team-7-370x370',
+            title: 'Isabella Jones',
+            status: 'Teenage Skiing Group Member',
+            description: true,
+            text: 'A falsis, consilium brevis hydra. Sunt cliniases imperium mirabilis, altus solitudoes. Tabess peregrinatione!'
+          })
+
+      a.button.button-primary.button-leaf(href='#') View all members
+  ="\n"
+
+  include ../sections/_section-questions
+
+  // Page Footer
+  include ../sections/_footer-classic

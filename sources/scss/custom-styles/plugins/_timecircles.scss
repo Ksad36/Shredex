@@ -1,0 +1,142 @@
+/*
+*
+* Time Circles
+*/
+
+//
+// This element is created inside your target element
+// It is used so that your own element will not need to be altered
+//
+.time_circles {
+  position: relative;
+  width: 100%;
+  margin-bottom: 4%;
+}
+
+//
+// This is all the elements used to house all text used
+// in time circles
+//
+.time_circles > div {
+  position: absolute;
+  top: 0 !important;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -8px;
+  text-align: center;
+
+  span {
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid $gray-200;
+      transform: translate(-50%, -50%);
+      will-change: border;
+    }
+
+    // Medium ≥576px
+    @include media-breakpoint-up(sm) {
+      &::before {
+        width: 115px;
+        height: 115px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  #DateCountdown {
+    width: 100%;
+  }
+}
+
+//
+// Titles (Days, Hours, etc)
+//
+.time_circles > div > h4 {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  right: 0;
+  transform: translateY(-100%);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: $font-family-base;
+  font-weight: 500;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  letter-spacing: 0;
+  color: $gray-800;
+  text-transform: capitalize;
+
+  & + * {
+    margin-top: 0;
+  }
+
+  // Large ≥576px
+  @include media-breakpoint-up(sm) {
+    font-size: 20px !important;
+    top: calc(100% + 16px);
+  }
+
+  // Medium ≥768px
+  @include media-breakpoint-up(md) {
+    top: calc(100% + 26px);
+  }
+}
+
+//
+// Time numbers, ie: 12
+//
+.time_circles > div > span {
+  display: block;
+  text-align: center;
+  font-size: 24px !important;
+  line-height: 1 !important;
+  font-weight: 500;
+  letter-spacing: 0;
+  font-family: $font-family-sec;
+  color: $gray-800;
+
+  @include media-breakpoint-up(md) {
+    font-size: 34px !important;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 48px !important;
+  }
+}
+
+%context-dark {
+  .time_circles > div > span {
+    color: $white;
+
+    &::before {
+      border-color: $gray-300;
+    }
+  }
+
+  .time_circles > div > h4 {
+    color: $white;
+  }
+}
+
+.countdown-wrap {
+  max-width: 730px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+* + .countdown-wrap { margin-top: 35px; }
+.countdown-wrap + .button { margin-top: 40px; }

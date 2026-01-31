@@ -1,0 +1,22 @@
+//- box comment
+
+mixin box-comment(obj)
+  .box-comment
+    .unit.flex-column.flex-md-row
+      .unit-left
+        +jpg(obj.img, 'img-circles')
+      .unit-body
+        .group-xl
+          h4.box-comment-author: a(href='#')=obj.author
+          span.box-comment-time 2 days ago
+          if(obj.userMessage)
+            .box-comment-user-message
+              span.icon.mdi.mdi-reply
+              span=obj.userMessage
+
+        p.box-comment-text=obj.text
+        .box-comment-reply
+          span.icon.mdi.mdi-reply
+          a(href='#') Reply
+
+    block

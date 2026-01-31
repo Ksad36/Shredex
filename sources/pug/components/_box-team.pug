@@ -1,0 +1,20 @@
+//- box team
+
+mixin box-team(obj)
+  .box-team(class=obj.mod)
+    .box-team-header
+      +jpg(obj.img, 'box-team-img')
+      ul.box-team-social-list
+        li.box-team-social-item
+          a.mdi.mdi-facebook(href='#')
+        li.box-team-social-item
+          a.mdi.mdi-twitter(href='#')
+        li.box-team-social-item
+          a.mdi.mdi-linkedin(href='#')
+    h4.box-team-title: a(href='#')=obj.title
+    p.box-team-status=obj.status
+    if(obj.description == true)
+      if(obj.text)
+        p.box-team-text=obj.text
+      else
+        p Lorem ipsum dolor sit amet, et est labore labitur nominavi, melius perfecto petentium qui eu. Tibique reprimique at mel, nam in errem epicuri constituam.

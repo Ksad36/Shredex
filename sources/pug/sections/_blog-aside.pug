@@ -1,0 +1,104 @@
+//- Includes
+include ../components/_ui-thumbnail-classic
+include ../components/_widget-twitter
+
+.row.row-60.row-xl-110.blog-aside
+  .col-sm-6.col-md-12
+    h2 Search
+    // RD Search Form
+    form.form-search.rd-search(action='search-results.html', method='GET')
+      .form-wrap
+        label.form-label(for="search-form") Enter a keyword...
+        input#search-form.form-input.form-search-input(type='text', name='s', autocomplete='off')
+        button(type="submit").button-search.mdi.mdi-magnify
+
+  .col-sm-6.col-md-12
+    h2 About us
+    p We are Winter Sports, a community of dedicated skiing & snowboarding instructors, journalists, and bloggers, offer you the best insight on where to go for winter holidays.
+    a.button.button-md.button-primary.button-leaf(href='#') Read more
+
+  .col-sm-6.col-md-12
+    h2 Categories
+    ul.list-big.list-marked
+      li: a(href='#') Skiing
+      li: a(href='#') Snowboarding
+      li: a(href='#') Tips & Tricks
+      li: a(href='#') Winter
+      li: a(href='#') News
+
+  .col-sm-6.col-md-12
+    h2 Gallery
+    .row.row-xs.row-10(data-lightgallery='group')
+      .col-4
+        +thumbnail-classic({
+          modClass: 'thumbnail-classic-xs',
+          img: 'gallery-mini-1-83x83',
+          imgOriginal: 'gallery-1-1200x800-original'
+        })
+
+      .col-4
+        +thumbnail-classic({
+          modClass: 'thumbnail-classic-xs',
+          img: 'gallery-mini-2-83x83',
+          imgOriginal: 'gallery-2-1200x800-original'
+        })
+
+      .col-4
+        +thumbnail-classic({
+          modClass: 'thumbnail-classic-xs',
+          img: 'gallery-mini-3-83x83',
+          imgOriginal: 'gallery-3-1200x800-original'
+        })
+
+      .col-4
+        +thumbnail-classic({
+          modClass: 'thumbnail-classic-xs',
+          img: 'gallery-mini-4-83x83',
+          imgOriginal: 'gallery-4-1200x800-original'
+        })
+
+      .col-4
+        +thumbnail-classic({
+          modClass: 'thumbnail-classic-xs',
+          img: 'gallery-mini-5-83x83',
+          imgOriginal: 'gallery-5-1200x800-original'
+        })
+
+      .col-4
+        +thumbnail-classic({
+          modClass: 'thumbnail-classic-xs',
+          img: 'gallery-mini-6-83x83',
+          imgOriginal: 'gallery-6-1200x800-original'
+        })
+
+      .col-4
+        +thumbnail-classic({
+          modClass: 'thumbnail-classic-xs',
+          img: 'gallery-mini-7-83x83',
+          imgOriginal: 'gallery-7-1200x800-original'
+        })
+
+      .col-4
+        +thumbnail-classic({
+          modClass: 'thumbnail-classic-xs',
+          img: 'gallery-mini-8-83x83',
+          imgOriginal: 'gallery-8-1200x800-original'
+        })
+
+      .col-4
+        +thumbnail-classic({
+          modClass: 'thumbnail-classic-xs',
+          img: 'gallery-mini-9-83x83',
+          imgOriginal: 'gallery-9-1200x800-original'
+        })
+
+  .col-sm-6.col-md-12
+    h2 Archive
+    ul.list-big.list-marked
+      li: a(href='#') January 2018
+      li: a(href='#') February 2018
+      li: a(href='#') March 2018
+      li: a(href='#') April 2018
+      li: a(href='#') May 2018
+
+  block longAside

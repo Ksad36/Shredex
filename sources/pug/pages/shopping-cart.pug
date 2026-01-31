@@ -1,0 +1,71 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_box-product
+include ../components/_ui-pagination
+
+block variables
+  - var activeCategory = 'shop'
+  - var pageName = 'Shopping Cart'
+
+block page 
+  // Page Header
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    subtitle: 'Shop',
+    path: [pageName],
+    bgImage: 'bg-breadcrumbs'
+  })
+
+  // Shopping Cart
+  section.section.section-xxl.bg-default
+    .container
+      .table-custom-responsive
+        table.table-custom.table-cart
+          thead
+            tr
+              th #
+              th Product
+              th Price
+              th(colspan="2") Quantity
+
+          tbody
+            tr
+              td 1
+              td
+                .table-cart-figure: +png('product-14-49x80')
+                a.table-cart-link(href='single-product.html') Black Diamond Dawn Patrol
+              td $39.00
+              td.stepper-variant-3: input.form-input(type="number" data-zeros="true" value="1" min="1" max="1000")
+              td: a.table-cart-close.icon.mdi.mdi-close(href='#')
+
+            tr
+              td 2
+              td
+                .table-cart-figure: +png('product-15-72x37')
+                a.table-cart-link(href='single-product.html') Coface Anti-Fog Goggles
+              td $23.00
+              td.stepper-variant-3: input.form-input(type="number" data-zeros="true" value="1" min="1" max="1000")
+              td: a.table-cart-close.icon.mdi.mdi-close(href='#')
+
+      .group-between.group-xl
+        div
+          // RD Mailform
+          form.rd-form.rd-mailform.rd-form-inline
+            .form-wrap
+              input.form-input(id="coupon-code" type="text" name="email")
+              label.form-label(for="coupon-code") Coupon Code...
+            .form-button
+              button.button.button-primary(type="submit") Apply coupon
+
+        div
+          .group-xl.group-middle
+            h2.box-product-price $62.00
+            a.button.button-primary.button-leaf(href='checkout.html') Checkout
+
+  ="\n"
+
+  // Page Footer
+  include ../sections/_footer-classic

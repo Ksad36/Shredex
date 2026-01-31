@@ -1,0 +1,51 @@
+footer.section.footer-classic.bg-footer.bg-overlay-90.context-dark.snow-animate
+  .section-xxl
+    .container
+      .row.row-50.justify-content-center
+        .col-lg-4.wow.fadeInUp(data-wow-delay='.1s')
+          h2 About us
+          p.max-width-xl-90.text-gray-400 We are Winter Sports, a community of dedicated skiing & snowboarding instructors, journalists, and bloggers. Our aim is to offer you the best insight on where to go for your winter holiday as well as to give you amazing skiing, snowboarding, and snowmobile riding opportunities with free benefits and bonuses for registered clients.
+          a.footer-brand(href='./'): +png('logo-gray-143x63')
+        .col-sm-8.col-md-6.col-lg-4.wow.fadeInUp(data-wow-delay='.2s')
+          h2 Latest blog posts
+          +post-minimal({
+            mod: '',
+            img: 'post-mini-1-70x70',
+            title: '10 New Snow Sports to Try This Winter',
+            time: 'December 20, 2018 at 12:29 pm',
+            datetime: '2018-12-20 12:29'
+          })
+
+          +post-minimal({
+            mod: '',
+            img: 'post-mini-2-70x70',
+            title: 'Daredevil Winter Sports in Finland',
+            time: 'January 20, 2018 at 13:29 pm',
+            datetime: '2018-01-20 13:29'
+          })
+
+          +post-minimal({
+            mod: '',
+            img: 'post-mini-3-70x70',
+            title: 'Best-Value Family Ski Trips',
+            time: 'February 20, 2018 at 14:29 pm',
+            datetime: '2018-02-20 14:29'
+          })
+        .col-sm-8.col-md-6.col-lg-4.wow.fadeInUp(data-wow-delay='.3s')
+          h2 Get in touch
+          form.rd-form.form-sm.rd-mailform(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              input#footer-form-name.form-input(type='text' name='name' data-constraints='@Required')
+              label.form-label(for='footer-form-name') Name
+            .form-wrap
+              input#footer-form-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+              label.form-label(for='footer-form-email') E-mail
+            .form-wrap
+              label.form-label(for='footer-form-message') Message
+              textarea#footer-form-message.form-input(name='message' data-constraints='@Required')
+            .form-wrap
+              button.button.button-md.button-primary(type='submit') Send
+
+  .container.wow.fadeInUp(data-wow-delay='0s')
+    +rights
+="\n"  

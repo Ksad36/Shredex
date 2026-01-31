@@ -1,0 +1,14 @@
+include ../components/_ui-inline-subscribe-form
+
+// Subscribe to Our Newsletter
++parallax({
+  img: 'bg-forms',
+  addClass: 'section-lg context-dark bg-overlay-80 snow-animate'
+})
+  .container: .row.row-30.align-items-center.justify-content-center
+    .col-md-9.col-lg-6.col-xl-7
+      h1 Subscribe to Our Newsletter
+
+    .col-md-9.col-lg-6.col-xl-5
+      +inline-subscribe-form({customUnique: '1'})
+="\n"

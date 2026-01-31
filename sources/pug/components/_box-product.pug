@@ -1,0 +1,21 @@
+//- box info
+
+mixin box-product-modern(obj)
+  .box-product(class=obj.mod)
+    if(obj.badge == true)
+      span.badge.badge-primary Sale
+    p.box-product-name: a(href='single-product.html')=obj.name
+    h4.box-product-price='$' + obj.price + '.00'
+    .box-product-body
+      +png(obj.img, 'box-product-img')
+      .box-product-button
+        a.button.button-sm.button-primary(href='shopping-cart.html') Add to cart
+        a.button.button-sm.button-gray-400(href='single-product.html') View details
+
+mixin box-product-classic(obj)
+  .box-product(class=obj.mod)
+    .box-product-body
+      a(href='single-product.html'): +png(obj.img, 'box-product-img')
+    p.box-product-name: a(href='single-product.html')=obj.name
+    h2.box-product-price='$' + obj.price + '.00'
+    a.button.button-primary.button-leaf(href='shopping-cart.html') Add to cart

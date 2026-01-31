@@ -1,0 +1,136 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_box-product
+include ../components/_box-comment
+
+block variables
+  - var activeCategory = 'shop'
+  - var pageName = 'Single Product'
+
+block page 
+  // Page Header
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    subtitle: 'Shop',
+    path: [pageName],
+    bgImage: 'bg-breadcrumbs'
+  })
+
+  // Similar products
+  section.section.section-sm.section-first.bg-default
+    .container
+      .row.row-50.row-lg-80.row-xl-100.justify-content-center
+        .col-sm-10.col-md-12.col-lg-6.col-xl-5
+          .slick-vertical
+            // Slick Carousel
+            .slick-slider.carousel-parent(data-arrows="false", data-loop="false", data-dots="false", data-swipe="true", data-items="1" data-child="#child-carousel", data-for="#child-carousel")
+              .item
+                +jpg('product-11-432x432')
+              .item
+                +jpg('product-12-432x432')
+              .item
+                +jpg('product-13-432x432')
+
+            .slick-slider#child-carousel(data-for=".carousel-parent", data-arrows="true",
+            data-loop="false", data-dots="false", data-swipe="false",
+            data-items="3", data-sm-items="3", data-md-items="3", data-lg-items="3", data-xl-items="3", data-slide-to-scroll="1", data-md-vertical='true')
+              .item
+                .slick-slide-overlay
+                  +jpg('product-11-432x432')
+              .item
+                .slick-slide-overlay
+                  +jpg('product-12-432x432')
+              .item
+                .slick-slide-overlay
+                  +jpg('product-13-432x432')
+
+        .col-lg-6.col-xl-5
+          .box-product-description
+            h3 Coface Anti-Fog Goggles
+            p.text-gray-600 We know that you are those people who know what a taste of a happy life is. The team is ready to help you 24/7/365. As a result, you will leave this store happy, having the item you have been searching for. You’ll be pleasantly surprised by our prices - we keep them competitive so that you could get everything that you need for your winter fun and save money.
+            .group-lg
+              .box-product-rewards
+                span.icon.mdi.mdi-star
+                span Bestseller #[span 2016]
+
+              .box-product-rewards
+                span.icon.mdi.mdi-trophy
+                span Bestseller #[span 2015]
+
+              .box-product-rewards
+                span.icon.mdi.mdi-comment-processing
+                a(href='#') 2 customer reviews
+
+            .box-product-count
+              span.text-gray-600 Quantity
+              div.stepper-variant-2: input.form-input(type="number" data-zeros="true" value="1" min="1" max="1000")
+
+            h2.box-product-price $29.00
+
+            .group-md
+              a.button.button-primary(href='shopping-cart.html') Add to cart
+              a.button.button-white-outline(href='#') Add to wishlist
+  ="\n"
+
+  section.section.section-sm.section-last.bg-default
+    .container
+      .row.justify-content-center
+        .col-lg-11.col-xl-10
+          // Bootstrap tabs
+          #tabs-1.tabs-custom.tabs-horizontal.tabs-corporate
+            // Nav tabs
+            ul.nav.nav-tabs
+              li.nav-item(role='presentation'): a.nav-link.active(href='#tabs-1-1' data-toggle='tab') Description
+              li.nav-item(role='presentation'): a.nav-link(href='#tabs-1-2' data-toggle='tab') Additional information
+              li.nav-item(role='presentation'): a.nav-link(href='#tabs-1-3' data-toggle='tab') Reviews (2)
+
+            // Tab panes
+            .tab-content
+              div#tabs-1-1.tab-pane.fade.show.active
+                p We are the largest winter sports store for all the winter sport lovers. We know that you are passionate about snowboarding, skiing, speed skating, luge, bobsleigh and many more sports. We know that you are those people who know what a taste of a happy life is. The team is ready to help you 24/7/365. As a result, you will leave this store happy, having the item you have been searching for. You’ll be pleasantly surprised by our prices - we keep them competitive so that you could get everything that you need for your winter fun and save money.
+
+              div#tabs-1-2.tab-pane.fade
+                .table-custom-responsive
+                  table.table-custom.table-custom-primary.table-product-info
+                    tbody
+                      tr
+                        td Model No.:
+                        td 4300004648
+                      tr
+                        td Shipping Weight (in pounds):
+                        td 2.45
+                      tr
+                        td Product in Inches (L x W x H):
+                        td 6.108 x 6.108 x 6.008
+
+                      tr
+                        td Shop No.:
+                        td 550700962
+
+              div#tabs-1-3.tab-pane.fade
+                +box-comment({
+                  img: 'team-12-80x80',
+                  author: 'Olivia Grosh',
+                  text: 'I loved everything about buying from you! My purchase was carefully packaged and quickly shipped. I was also pleased with great service and delivery times. There is no such awesome store on the web that can match you.'
+                })
+                  +box-comment({
+                    img: 'team-13-80x80',
+                    author: 'Alan Smith',
+                    userMessage: 'Olivia Grosh',
+                    text: 'Hi guys! I\'m so impressed!!! Your service is unbeaten, support staff  is so friendly...very knowledgeable and professional team! The product I received is of the highest quality ever!'
+                  })
+  ="\n"
+
+  // Similar products
+  section.section.section-xxl.bg-white
+    .container
+      h1 Similar products
+      .row.row-50.row-lg-80
+        include ../sections/_section-product-catalog-1-line
+  ="\n"
+
+  // Page Footer
+  include ../sections/_footer-classic

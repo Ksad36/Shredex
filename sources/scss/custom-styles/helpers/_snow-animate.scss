@@ -1,0 +1,31 @@
+/*
+*
+* Text styling
+*/
+
+@keyframes snow {
+  0% {background-position: 0 0, 0 0, 0 0;}
+  100% {background-position: 500px 1000px, -400px 800px, 300px 300px;}
+}
+
+.snow-animate {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../images/snowflake.png'), url('../images/snowflake3.png'), url('../images/snowflake2.png');
+    animation: snow 20s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  > .container {
+    position: relative;
+  }
+}

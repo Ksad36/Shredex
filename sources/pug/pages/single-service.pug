@@ -1,0 +1,112 @@
+extends  ../_skeleton
+
+//- Includes
+include ../components/_quote
+include ../components/_ui-card
+include ../components/_post
+
+block variables
+  - var activeCategory = 'pages'
+  - var pageName = 'Single service'
+
+block page 
+  // Page Header
+  include ../sections/_header-classic
+
+  +breadcrumbs({
+    category: activeCategory,
+    subtitle: 'Who We Are',
+    path: [pageName],
+    bgImage: 'bg-breadcrumbs'
+  })
+
+  // Single Service
+  section.section.section-xxl.bg-white.text-md-left.section-relative
+    .container
+      .row
+        .col-lg-6
+          h1 Single Service
+          p Mauris feugiat convallis tristique. Nullam molestie est maximus mauris ultrices ullamcorper. Sed pretium felis ut tempor posuere. Curabitur sit amet blandit felis. Curabitur iaculis, tellus ut rutrum efficitur, neque sapien viverra lorem, non lacinia mauris nulla ac orci. Phasellus scelerisque mi enim, dignissim sed, tristique non.
+          article.quote-classic.quote-classic-inset
+            .quote-classic-text: p.q Nunquam talem compater. Ecce, neuter tus! Cum species ridetis, omnes bursaes aperto fidelis, teres contencioes.
+          p Sed pretium felis ut tempor posuere. Curabitur sit amet blandit felis. Curabitur iaculis, tellus ut rutrum efficitur, neque sapien viverra lorem, non lacinia mauris nulla ac orci. Phasellus scelerisque mi enim, dignissim sed, tristique non.
+          a.button.button-primary.button-leaf(href='#') View all information
+
+        .col-lg-6.box-static.d-none.d-lg-block
+          .bg-image-right-3
+  ="\n"
+
+  // Testimonials
+  section.section.section-xxl.bg-default
+    .container
+      h1 Testimonials
+      .owl-carousel.owl-dots-position-1.text-md-left(data-items='1', data-stage-padding='0', data-loop='true', data-autoplay='true', data-margin='0', data-mouse-drag="false", data-dots='true', data-animation-in="fadeIn", data-animation-out="fadeOut")
+        .owl-item
+          .unit.unit-spacing-xxl.flex-column.flex-md-row.quote-classic-wrap
+            .unit-left
+              +jpg('quote-4-210x210', 'img-circles')
+            .unit-body
+              // Quote Classic
+              article.quote-classic
+                span.icon.mdi.mdi-format-quote.quote-classic-icon
+                .quote-classic-text: p.q A falsis, canis barbatus fortis. Capio manducares, tanquam gratis verpa. Seculas persuadere in noster cirpi! Candidatus, scutum, et zeta. Ecce, calcaria! Armariums crescere in cubiculum! Historia neuter vita est. Nunquam demitto visus. Armarium, fortis, et diatria.
+                p.quote-classic-cite Susan Williams
+                p.quote-classic-status Regular Customer
+
+        .owl-item
+          .unit.unit-spacing-xxl.flex-column.flex-md-row.quote-classic-wrap
+            .unit-left
+              +jpg('quote-5-210x210', 'img-circles')
+            .unit-body
+              // Quote Classic
+              article.quote-classic
+                span.icon.mdi.mdi-format-quote.quote-classic-icon
+                .quote-classic-text: p.q Medicina moris, tanquam fortis nuptia. Velox, bassus orgias una carpseris de germanus, camerarius finis. Cum tumultumque ortum, omnes zeluses contactus pius, raptus tataes. Neuter compater sapienter perderes mortem est. Spatii, domina, et absolutio. Cur cotta experimentum? Lunas potus! Calceus, lumen, et lanista.
+                p.quote-classic-cite James Smith
+                p.quote-classic-status Regular Customer
+
+        .owl-item
+          .unit.unit-spacing-xxl.flex-column.flex-md-row.quote-classic-wrap
+            .unit-left
+              +jpg('quote-6-210x210', 'img-circles')
+            .unit-body
+              // Quote Classic
+              article.quote-classic
+                span.icon.mdi.mdi-format-quote.quote-classic-icon
+                .quote-classic-text: p.q Azureus tabes vix magicaes hydra est. Regius vortexs ducunt ad abnoba. Rusticus amors ducunt ad lanista. Est velox eleates, cesaris. Superbus, fidelis advenas patienter amor de alter, varius repressor. Eheu, secula! Equiso ortums, tanquam neuter onus. Est neuter impositio, cesaris.
+                p.quote-classic-cite Mary McMillan
+                p.quote-classic-status Regular Customer
+  ="\n"
+
+  // More Services
+  section.section.section-xxl.bg-white
+    .container
+      h1 More Services
+      .row.row-40.justify-content-center.justify-content-md-start
+        .col-sm-8.col-md-6.col-lg-4
+          +post-classic({
+            mod: 'post-classic',
+            img: 'services-3-370x254',
+            title: 'Speed Ice Tour',
+            text: 'Sed pretium felis ut tempor posuere. Curabitur sit sed malesuada dui. Integer erat lacus, imperdiet et libero aliquet. Vestibulum pretium malesuada risus, sapien eget, efficitur orci. Mauris feugiat convallis.'
+          })
+        .col-sm-8.col-md-6.col-lg-4
+          +post-classic({
+            mod: 'post-classic',
+            img: 'services-4-370x254',
+            title: 'Mountain Tours',
+            text: 'Pol, a bene tus, lanista! Ubi est varius gluten? Cur nuptia trabem? Vae, exsul! Particula de salvus guttus, reperire adgium! Cum pars peregrinationes, omnes repressores contactus altus, ferox nuptiaes.'
+          })
+        .col-sm-8.col-md-6.col-lg-4
+          +post-classic({
+            mod: 'post-classic',
+            img: 'services-5-370x254',
+            title: 'Family Skiing',
+            text: 'Eheu, armarium! Est domesticus bursa, cesaris. Nunquam quaestio gluten. Torus, lumen, et hibrida. Flavum xiphias grauiter pugnas visus est. Castus, regius tuss inciviliter talem de ferox, dexter gemna.'
+          })
+  ="\n"
+
+  include ../sections/_section-questions
+
+  // Page Footer
+  include ../sections/_footer-classic

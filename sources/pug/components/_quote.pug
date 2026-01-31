@@ -1,0 +1,21 @@
+//- quote
+
+mixin quote-modern(obj)
+  .quote-modern(class=obj.mod)
+    .unit.align-items-center
+      .unit-left
+        +jpg(obj.img, 'img-circles')
+      .unit-body
+        h4.quote-modern-cite=obj.author
+        if(obj.status)
+          p.quote-modern-status=obj.status
+        else
+          p.quote-modern-status Regular Customer
+
+    .quote-modern-text
+      if(obj.text)
+        p.q=obj.text
+      else if(obj.quoteText == '2')
+        p.q I am happy to send you this message! Your dispatcher and the driver went out of their way to help me tonight. Just wanted to say how satisfied I was with the driver James, he was friendly and drove very well. Thank you!
+      else
+        p.q I am happy to send you this message! Your dispatcher and the driver went out of their way to help me tonight. Just wanted to say how satisfied I was with the driver James, he was friendly and drove very well. The car was excellent and I will recommend your service. Thank you!
